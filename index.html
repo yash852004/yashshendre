@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rishabh Mishra Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Yash Shendre</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#publications-section" class="nav-link"><span>Publications</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Yash Shendre</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Undergraduate Final Year Student ',
+						'Electrical Engineer  ',
+						'Innovator  ',
+						'Researcher   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 130); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 150);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Electrical Engineering Innovator</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/yash-shendre-3a9b30211" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://www.instagram.com/yashuuu_____08?igsh=dGdsdmt1cGFrd3A=" class="btn btn-white btn-outline-white py-3 px-4">instagram</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Yash Shendre</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Undergraduate</span></p>
+										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
+										<p><span class="title-s">Address: </span> <span>Yavatmal, Maharashtra, India </span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Auto CAD </span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>MATLAB</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Solar Power Plant Installation & Maintenance</span> <span class="pull-right">9%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Power System</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Thinkercad</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>An electrical engineering student with strong skills in MATLAB, AutoCAD Electrical, and Fusion 360, along with hands-on experience in solar energy and substation operations.  
+									I've completed internships with MSEDCL and 5+ different  Industries and won 1st prize at the 'Avishkar' innovation competition. 
+									I have published multiple research papers on various topics.Additionally, I actively participate in hackathons and community initiatives, such as tree plantation drives.</p>
+							
+									<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Power System & Optimization</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Electrical Engineering</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hind, Marathi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>MATLAB, CircuitLab, Arduino, Tinkercad, Simulink</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Power System Maintenance, Innovation, Research Papers, Circuit Design</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Playing Chess, Researching Activity, Searching for Innovation, Playing with Electric Circuits</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="3">0</span> <span></span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/yash-shendre-3a9b30211" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Passionate Electrical Engineering Student with Hands-On Experience in MATLAB, AutoCAD Electrical, and Fusion 360, Proven Track Record in Solar Energy, Substation Operations, and Research Innovation, machine learning algorithms and project management.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Internships</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+					<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">03/08/2021 to 15/09/2021</span>
+						<h2>INDUSTRIAL TRAINING PROGRAM</h2>
+						<span class="position">Urja Swaraj LLP </span>
+						<p class="mt-4">Solar PV Technologies and Job Opportunities in Solar Photovoltaic 
+							<a href="https://drive.google.com/file/d/1C1yI34Lyrqi66qzTEkfkryrdwWio9yFd/view?usp=sharing" target="_blank">View Certificate</a>
+							<ul>
+								<!-- <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li> -->
+								<!-- <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li> -->
+								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">01/08/2022 to 31/08/2022</span>
+						<h2>Vocational Industrial (Inplant) Training</h2>
+						<span class="position">MSEDCL 132KV/33KV SUBSTATION MIDC LOHARA, YAVATMAL </span>
+						<a href="https://drive.google.com/file/d/1uAGbyE1MXQBJpwyqaxNV_zWal6Ac3Nj3/view?usp=sharing" target="_blank">View Certificate</a>
+						<!-- <p class="mt-4">Solar PV Technologies and Job Opportunities in Solar Photovoltaic  -->
+							<ul>
+								<!-- <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li> -->
+								<!-- <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li> -->
+								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">20/03/2023 to 03/04/2023</span>
+						<h2>Internship</h2>
+						<span class="position">VINIT TRANSFORMERS YAVATMAL</span>
+						<a href="https://drive.google.com/file/d/1Y7v6QyXy5A0TGKREhEU0-5U_4wG4bZ-a/view?usp=sharing" target="_blank">View Certificate</a>
+						<!-- <p class="mt-4">Solar PV Technologies and Job Opportunities in Solar Photovoltaic  -->
+							<ul>
+								<!-- <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li> -->
+								<!-- <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li> -->
+								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">07/12/2023 to 17/12/2023</span>
+						<h2>Inplant Training</h2>
+						<span class="position">Raymond UCO Denim Private Limited, MIDC, Yavatmal, Maharashtra </span>
+						<a href="https://drive.google.com/file/d/1eMM2W2soSgeIe5GbwdmBAfn0D5VxX_Jz/view?usp=sharing" target="_blank">View Certificate</a>
+						<!-- <p class="mt-4">Solar PV Technologies and Job Opportunities in Solar Photovoltaic  -->
+							<ul>
+								<!-- <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li> -->
+								<!-- <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li> -->
+								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">15/12/2023 to 31/12/2023</span>
+						<h2>Vocational Industrial (Inplant) Training</h2>
+						<span class="position">MSEDCL 132KV/33KV SUBSTATION MIDC LOHARA, YAVATMAL </span>
+						<a href="https://drive.google.com/file/d/1RTk500Yc6NOrVwiKFLhA1IekOkJ_lXh4/view?usp=sharing" target="_blank">View Certificate</a>
+						<!-- <p class="mt-4">Solar PV Technologies and Job Opportunities in Solar Photovoltaic  -->
+							<ul>
+								<!-- <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li> -->
+								<!-- <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li> -->
+								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+		</div>
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		  </div>
+		  <br>
+		  <div class="row">
+			<div class="col-md-6">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2018-2019</span>
+				<h2>Secondary School Certificate</h2>
+				<span class="position">Sanskar English Medium School, Yavatmal</span>
+				<p class="mt-4">Grade: First class distinction.</p>
+				<a href="https://drive.google.com/file/d/1cSm00B9O4GJWPAsgEEMkgAnbbH_RjgAn/view?usp=sharing" target="_blank">View Certificate</a>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2019-2022</span>
+				<h2>Diploma in Electrical Enginnering</h2>
+				<span class="position">Government Polytechnic, Yavatmal</span>
+				<p class="mt-4">Grade: First class distinction.</p>
+				<a href="https://drive.google.com/file/d/1aPeHfx7Sw_sVsRR2VIh9Vna2Ffd5407c/view?usp=sharing" target="_blank">View Certificate</a>
+			  </div>
+			</div>
+		  
+			<div class="col-md-6">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2022-2025</span>
+				<h2>Bachelor of Engineering</h2>
+				<span class="position">Jawaharlal Darda Institute of Enginnering And Technology</span>
+				<p class="mt-4">Pursuing</p>
+				<a href="https://drive.google.com/file/d/1FGlEPKdQzApqn2AjlQFdnV-nr1YKouyr/view?usp=sharing" target="_blank">View Certificate</a>
+			  </div>
+			</div>
+		  </div>
+		  
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1fReMH6HkeY8vN81mEhs9Gaz4F_DNWjqy/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>My Recent Projects.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.linkedin.com/posts/yash-shendre-3a9b30211_teamleader-finalyearproject-iot-activity-7143804783362052096-wF5N?utm_source=share&utm_medium=member_desktop" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.linkedin.com/posts/yash-shendre-3a9b30211_teamleader-finalyearproject-iot-activity-7143804783362052096-wF5N?utm_source=share&utm_medium=member_desktop">IOT Based Energy Management System</a></h3>
+                <p>This project focuses on optimizing energy usage in residential or commercial settings by using IoT technology. The system automatically controls room appliances like lights and fans based on occupancy and environmental conditions (light and temperature). Using sensors such as IR, LDR, and DHT11, along with an Arduino UNO, the system ensures energy conservation by switching off appliances when rooms are unoccupied. This project demonstrates the practical application of IoT in reducing energy waste and improving efficiency..</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.linkedin.com/posts/yash-shendre-3a9b30211_innovation-avishkarchampion-steamdistillationsuccess-activity-7146504182051635201-cR-L?utm_source=share&utm_medium=member_desktop" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.linkedin.com/posts/yash-shendre-3a9b30211_innovation-avishkarchampion-steamdistillationsuccess-activity-7146504182051635201-cR-L?utm_source=share&utm_medium=member_desktop">SCOPE OF EXTRACTION UNIT FOR MEDICAL AND AGRICULTURAL PURPOSE BY STEAM DISTILLATION PROCESS.</a></h3>
+                <p>This project focuses on developing a cost-effective and eco-friendly extraction unit using the steam distillation process. The system is designed to efficiently extract essential oils and other valuable plant materials from various herbs and leaves like eucalyptus, marigold, and rose. This method provides farmers and pharmaceutical industries with a scalable solution for producing extracts for fertilizers, medicines, and other applications, reducing both operational costs and time.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://www.linkedin.com/posts/yash-shendre-3a9b30211_techfestmemories-roboticsadventure-iitbombay-activity-7136358425516462201-RQs8?utm_source=share&utm_medium=member_desktop" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.linkedin.com/posts/yash-shendre-3a9b30211_techfestmemories-roboticsadventure-iitbombay-activity-7136358425516462201-RQs8?utm_source=share&utm_medium=member_desktop">Pick and Place Robot</a></h3>
+                <p>This project involves designing and developing an automated Pick and Place Robot that can efficiently lift and move objects from one location to another. The robot is equipped with sensors and actuators for precise control, making it ideal for industrial applications like assembly lines and warehouses. It reduces manual labor and enhances productivity by automating repetitive tasks with accuracy and speed.</p>
+              </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			 <div class="container"> -->
+				<!-- <div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			 </div> -->
+		<!-- </div> --> 
+
+		<!-- <div class="row d-flex justify-content-center">
+			Project 1
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="project-entry">
+				<img src="proj_1" alt="Project 1 Image" class="img-fluid">
+				<div class="text mt-3">
+				  <h3 class="heading">IOT Based Energy Management System 1</h3>
+				  <p>This project focuses on optimizing energy usage in residential or commercial settings by using IoT technology. The system automatically controls room appliances like lights and fans based on occupancy and environmental conditions (light and temperature). Using sensors such as IR, LDR, and DHT11, along with an Arduino UNO, the system ensures energy conservation by switching off appliances when rooms are unoccupied. This project demonstrates the practical application of IoT in reducing energy waste and improving efficiency.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			Project 2
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="project-entry">
+				<img src="images/project2.jpg" alt="Project 2 Image" class="img-fluid">
+				<div class="text mt-3">
+				  <h3 class="heading">Project Title 2</h3>
+				  <p>This project involves ... [short description].</p>
+				</div>
+			  </div>
+			</div>
+	  
+			Project 3
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="project-entry">
+				<img src="images/project3.jpg" alt="Project 3 Image" class="img-fluid">
+				<div class="text mt-3">
+				  <h3 class="heading">Project Title 3</h3>
+				  <p>A brief description of this project goes here ...</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section> -->
+	</section>
+
+	<section class="ftco-section" id="publications-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Publications</h1>
+			  <h2 class="mb-5">Publications</h2>
+			  <p>My Recent Publications.</p>
+			</div>
+		  </div>
+		  <section id="research-papers-section">
+			<h2>Research Papers</h2>
+			<table border="1" cellpadding="10" cellspacing="0">
+			  <thead>
+				<tr>
+				  <th>S.No</th>
+				  <th>Title of Research Paper</th>
+				  <th>Link</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>1</td>
+				  <td>‘INTELLIGENT TRAFFIC LIGHT CONTROL - A REVIEW PAPER.</td>
+				  <td><a href="https://drive.google.com/file/d/11ZgNPi6JChS11tru_RfjPWFmBaAovTxU/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+				  <td>2</td>
+				  <td>ELCTRICAL PERFORMANCE OF COMPOSITIVE MATERIAL INSULATOR.</td>
+				  <td><a href="https://drive.google.com/file/d/1UDK4KPurTNgyxnf18DHb06ES8yteTObA/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+				  <td>3</td>
+				  <td>SOLAR THERMAL INTEGRATED SYSTEM FOR POWER GENERATION </td>
+				  <td><a href="https://drive.google.com/file/d/1m1GlNa_GuMGUlvxuIJfbkoFt9eDUyU9i/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>NEW GENERATION VEHICLE – ELECTRIC VEHICLE </td>
+					<td><a href="https://drive.google.com/file/d/1ecs4V7Q90yZH-R_tICzXek3HexCM6w7h/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>UNDER AND OVER VOLTAGE PROECTION WITH EARTH FAULT INDICATION</td>
+					<td><a href="https://drive.google.com/file/d/1NWLCafzV3tD5bLz-C-SKzyQ7BDmvtk5w/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>WIND ENERGY</td>
+					<td><a href="https://drive.google.com/file/d/1mIXCiCOPeltn9RfFBXDTZD8AiRxix_u9/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>IOT BASED ENERGY MANAGEMENT SYSTEM</td>
+					<td><a href="https://drive.google.com/file/d/173Zw0nq29NeAQ7KYbsAkxH9H5Gym1sp8/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>132 KV/33 KV Substation</td>
+					<td><a href="https://drive.google.com/file/d/1wnkXnrlptzjDflRtE9bJmmxPSCPfyZqD/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>Nanoelectronics</td>
+					<td><a href="https://drive.google.com/file/d/1eBXziS8K64ewXkLjohejwxBPYDu6elO-/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>The Role of Machine Learning and the Internet of Things in Smart Building for Energy Efficiency – A Review Paper</td>
+					<td><a href="https://drive.google.com/file/d/16RbWQInwAfsWUzh7z8TMtEvsszYo-He2/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>The Pros and Cons of Self-Driving Cars: A Comprehensive Analysis</td>
+					<td><a href="https://drive.google.com/file/d/1scPLUzZ7I3o2YYy0-a2tmFeh74UgeN4x/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>Types of Transmission Towers and its Design</td>
+					<td><a href="https://drive.google.com/file/d/1kQ0EZCfGYS84sMizGRcW9WIiu3eHNteY/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>Types of Insulators Used in Transmission (Overhead) Lines</td>
+					<td><a href="https://drive.google.com/file/d/1SnDC7P3DTbhNOD7AAJGX7rdT6h5kD7LO/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>5 Emerging Trends in Electrical Engineering: What to Expect in Future</td>
+					<td><a href="https://drive.google.com/file/d/1HfzwFLDd938Z2xzhuWhxXy14CTVOPwB2/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>Enhancing Power System Resilience through Advanced Transformer Protection Techniques</td>
+					<td><a href="https://drive.google.com/file/d/1PyrnGhzOydeNjpgJvDkw3rgYpqwAZ7Aa/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+				<tr>
+				  <td>16</td>
+				  <td>33/11KV Substation Maharashtra State Electricity Distribution Co. Ltd. Lohara MIDC Yavatmal </td>
+				  <td><a href="https://drive.google.com/file/d/1P0ro6eLy16BMVwdX_YS11xv0E00qQ3qj/view?usp=sharing" target="_blank">View Paper</a></td>
+				</tr>
+			  </tbody>
+			</table>
+		  </section>
+		  
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>"Maharudhara Niwas", Plot No.19, Unnati Park, Chausala Road, Waghapur, Yavatmal- 445001, Maharashtra, India."</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 94203 58981</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">shendreyash9@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1x-VwZnRauYT128ilJVmFq21pozKpd_rl/view?usp=sharing">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/VBYxwFgMw5FtHjSL6" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/yash-shendre-3a9b30211"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
+				      <li class="ftco-animate"><a href="https://www.instagram.com/yashuuu_____08?igsh=dGdsdmt1cGFrd3A="><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
